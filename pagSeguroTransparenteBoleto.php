@@ -1,33 +1,33 @@
 <?php
 class pagSeguroTransparente {
 
-    public $payment
-    public $mode
-    public $method
-    public $name
-    public $email
-    public $areaCode
-    public $number
-    public $type
-    public $value
-    public $hash
-    public $currency
-    public $notificationURL
-    public $extraAmount
-    public $reference
-    public $street
-    public $number
-    public $complement
-    public $district
-    public $city
-    public $state
-    public $country
-    public $postalCode
-    public $type
-    public $cost
+    public $payment;
+    public $mode;
+    public $method;
+    public $name;
+    public $email;
+    public $areaCode;
+    public $number;
+    public $typeDoc;
+    public $value;
+    public $hash;
+    public $currency;
+    public $notificationURL;
+    public $extraAmount;
+    public $reference;
+    public $street;
+    public $numberAdd;
+    public $complement;
+    public $district;
+    public $city;
+    public $state;
+    public $country;
+    public $postalCode;
+    public $type;
+    public $cost;
 
-    public function __costruct($payment,$mode,$method,$name,$email, $areaCode,$number,$type, $value,$hash,$currency,$notificationURL,$extraAmount,$reference,$street,$number,$complement,$district,$city,$state,$country,$postalCode,$type,$cost){
-        parent::__costruct($payment,$mode,$method, $name, $email,$areaCode,$number,$type,$value, $hash, $currency, $hash,$notificationURL,$extraAmount,$reference,$street,$number,$complement,$district,$city,$state,$country,$postalCode,$type,$cost);
+    public function __costruct($payment,$mode,$method,$name,$email, $areaCode,$number,$typeDoc, $value,$hash,$currency,$notificationURL,$extraAmount,$reference,$street,$numberAdd,$complement,$district,$city,$state,$country,$postalCode,$type,$cost){
+        parent::__costruct($payment,$mode,$method, $name, $email,$areaCode,$number,$typeDoc,$value, $hash, $currency, $hash,$notificationURL,$extraAmount,$reference,$street,$numberAdd,$complement,$district,$city,$state,$country,$postalCode,$type,$cost);
     }
     public function __get($valor){
         return $this->$valor;
@@ -48,7 +48,7 @@ class pagSeguroTransparente {
                 ),
                 'documents' => array(
                     'document' => array(
-                        'type' => $this->type,
+                        'type' => $this->typeDoc,
                         'value' => $this->value
                     )
                 ),
@@ -62,7 +62,7 @@ class pagSeguroTransparente {
             'shipping' => array(
                 'address' => array(
                     'street' => $this->street,
-                    'number' => $this->number,
+                    'number' => $this->numberAdd,
                     'complement' => $this->complement,
                     'district' => $this->district,
                     'city' => $this->city,
